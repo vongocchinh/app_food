@@ -7,6 +7,7 @@ import MenuStackScreen from './../../Menu/MenuStackSreen';
 import HomeStackScreen from './../../HomeStackScreen/HomeStackScreen';
 import ProfileStackScreen from '../../ProfileScreen/ProfileStackSreen';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import NotificationScreen from './../../notificationScreen/NotificationScreen';
 
 const Tab = createBottomTabNavigator();
 // const Tab = createMaterialBottomTabNavigator();
@@ -111,7 +112,7 @@ export default function MainTabScreen() {
       initialRouteName="Trang chủ"
       screenOptions={{headerShown: false}}
       barStyle={{backgroundColor: 'tomato'}}>
-      <Tab.Screen name="Thông báo" component={MenuStackScreen} />
+      <Tab.Screen name="Thông báo" component={NotificationScreen} />
       <Tab.Screen name="Hộp thư" component={MenuStackScreen} />
       <Tab.Screen name="Trang chủ" component={HomeStackScreen} />
       <Tab.Screen name="Tài khoản" component={ProfileStackScreen} />

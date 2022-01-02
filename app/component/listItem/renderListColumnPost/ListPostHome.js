@@ -13,12 +13,14 @@ const Item = props => {
         style={[styles.images]}
         source={require('../../../asset/images/food-banner3.jpg')}
       />
-      <Text style={[styles.titlePost]}>Siêu khuyến mãi đầu năm 2022</Text>
+      <Text numberOfLines={1} style={[styles.titlePost]}>
+        Siêu khuyến mãi đầu năm 2022
+      </Text>
       <Text style={[styles.titleDate]}>20.12.2021-20.02.2022</Text>
     </TouchableOpacity>
   );
 };
-export default function ListPost(props) {
+export default function ListPostHome(props) {
   const {data} = props;
   return (
     <View style={[styles.container]}>
@@ -61,5 +63,26 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 15,
     fontWeight: '500',
+  },
+  containerItemRow: {
+    height: 100,
+    flexDirection: 'row',
+    marginBottom: 15,
+  },
+  images_row: {
+    flex: 1.5,
+    width: '100%',
+    height: '100%',
+    borderRadius: 5,
+  },
+  titlePost_row: {
+    fontWeight: '500',
+    color: 'black',
+    fontSize: 14,
+  },
+  titleDate_row: {
+    fontWeight: '400',
+    color: 'black',
+    fontSize: 13,
   },
 });

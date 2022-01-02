@@ -16,7 +16,7 @@ import SlideImages from './../../component/swiper/slideImages';
 import SlideProduct from '../../component/customList/slideProduct';
 import RenderSlideProduct from './../../component/customList/renderSlideProduct';
 import HeaderListCard from '../../component/headerList/headerList';
-import ListPost from './../../component/listItem/renderListColumn/ListPost';
+import ListPost from './../../component/listItem/renderListColumnPost/ListPostHome';
 import {styleColorIcon} from './../../constant/styleColor';
 import {data2, data3, data1} from './data';
 

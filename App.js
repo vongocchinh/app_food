@@ -26,6 +26,7 @@ import ProductList from './app/screen/productList/productList';
 import FilterScreen from './app/screen/filterScreen/filterScreen';
 import ScreenPostSale from './app/screen/screenPostSale/ScreenPostSale';
 import ScreenPostDetail from './app/screen/screenPostSale/ScreenPostDetail';
+import NotificationScreen from './app/screen/notificationScreen/NotificationScreen';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -50,6 +51,10 @@ const App = () => {
           <Stack.Screen name="FilterScreen" component={FilterScreen} />
           <Stack.Screen name="ScreenPostSale" component={ScreenPostSale} />
           <Stack.Screen name="ScreenPostDetail" component={ScreenPostDetail} />
+          <Stack.Screen
+            name="NotificationScreen"
+            component={NotificationScreen}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

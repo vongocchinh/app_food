@@ -98,7 +98,14 @@ const ItemColumn = () => {
         </Text>
         <Text style={[styles.branch]}>Món ăn việt</Text>
         <Ratting style={{marginTop: 3}} />
-        <View style={[{flexDirection: 'row', justifyContent: 'space-between'}]}>
+        <View
+          style={[
+            {
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            },
+          ]}>
           <Text style={[styles.price]}>
             500.000
             <Text style={[stylesText.current]}>VNĐ</Text>
@@ -117,13 +124,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginBottom: 60,
+    marginBottom: 110,
   },
   container_2: {
     justifyContent: 'space-between',
     flexDirection: 'column',
     flexWrap: 'wrap',
-    marginBottom: 120,
+    marginBottom: 130,
   },
   containerItem: {
     // flex: 2,
