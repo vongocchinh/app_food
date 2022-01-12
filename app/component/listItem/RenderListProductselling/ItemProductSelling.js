@@ -1,13 +1,11 @@
 import React from 'react';
 import {View, StyleSheet, Image, Text} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import Ratting from './../../ratting/ratting';
 import Branch from './branch';
+import Ratting from './../../ratting/ratting';
 
-function ItemRow() {
-  let mytextvar =
-    'Nem rán/chả giò Nem rán/chả giò Nem rán/chả giò Nem rán/chả giò';
-  const maxlimit = 3;
+function ItemProductSelling() {
+  let mytextvar = 'Nem rán/chả giò chỉ với 120k';
   return (
     <TouchableOpacity activeOpacity={0.7}>
       <View style={[styles.container]}>
@@ -45,18 +43,18 @@ const styles = StyleSheet.create({
   },
   containerDetail: {
     flex: 3,
-    marginLeft: 15,
+    marginLeft: 5,
   },
   images: {
     height: '100%',
     width: 90,
-    borderRadius: 10,
+    borderRadius: 5,
   },
   cardTitle: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '400',
     color: 'black',
     // fontFamily:
   },
 });
-export default ItemRow;
+export default ItemProductSelling;

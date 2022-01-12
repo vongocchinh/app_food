@@ -20,4 +20,12 @@ export const color = {
   active: '#E25541',
   white: '#FFF',
   black: '#000',
+  green: 'green',
+  red: 'red',
+  yellow: 'yellow',
+  blue: '#4082ED',
+};
+
+export const background = {
+  backgroundColor_modal: 'rgba(52, 52, 52, 0.2)',
 };
