@@ -129,3 +129,7 @@ function _calculateAge(birthday) {
 }
 
 //form button register demo
+
+export const RadioSizeCheck = value => {
+  return value ? undefined : 'Vui lòng chọn size để đặt hàng';
+};

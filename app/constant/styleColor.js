@@ -28,4 +28,5 @@ export const color = {
 
 export const background = {
   backgroundColor_modal: 'rgba(52, 52, 52, 0.2)',
+  backgroundColor_modal_success: 'rgba(52, 52, 52, 0.05)',
 };
