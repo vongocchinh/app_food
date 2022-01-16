@@ -15,6 +15,7 @@ function Header(props) {
     styles,
     buttonBack = true,
     colorText,
+    IconRight,
   } = props;
   const navigation = useNavigation();
   return (
@@ -25,10 +26,14 @@ function Header(props) {
         </View>
       </TouchableOpacity>
       {nameLogo ? (
-        <Text style={[style.logo, colorText]}>{nameLogo}</Text>
+        <Text numberOfLines={1} style={[style.logo, colorText]}>
+          {nameLogo}
+        </Text>
       ) : null}
       {component ? component : null}
-      <View style={[{width: 20, justifyContent: 'flex-end'}]}></View>
+      <View style={[{width: 20, justifyContent: 'flex-end'}]}>
+        {IconRight ? IconRight : null}
+      </View>
     </View>
   );
 }

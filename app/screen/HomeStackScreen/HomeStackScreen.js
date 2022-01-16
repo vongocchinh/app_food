@@ -10,15 +10,14 @@ import {
   TouchableHighlightBase,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import HeaderMain from './../../component/header/headerMain';
-import ItemRow from './../../component/listItem/RenderListItemRow/ItemRow';
-import SlideImages from './../../component/swiper/slideImages';
-import SlideProduct from '../../component/customList/slideProduct';
-import RenderSlideProduct from './../../component/customList/renderSlideProduct';
-import HeaderListCard from '../../component/headerList/headerList';
-import ListPost from './../../component/listItem/renderListColumnPost/ListPostHome';
 import {styleColorIcon} from './../../constant/styleColor';
-import {data2, data3, data1} from './data';
+import HeaderMain from './../../component/header/headerMain';
+import SlideImages from './../../component/swiper/slideImages';
+import HeaderListCard from './../../component/headerList/headerList';
+import {data1, data2, data3} from './data';
+import RenderSlideProductSearchTop from './../../component/customListProductSearchTop/renderSlideProduct';
+import RenderListProductSellingHome from './../../component/listItem/RenderListProductselling/RenderListProuctSellingHome';
+import ListPostHome from './../../component/listItem/renderListColumnPost/ListPostHome';
 
 const SideBarTop = props => {
   const [indexKey, setIndexKey] = React.useState(0);
@@ -65,6 +64,7 @@ function HomeStackScreen() {
   const arr = [1, 2, 3, 4, 5];
   return (
     <View style={[styles.container]}>
+      {/* <StatusBar translucent backgroundColor="transparent" /> */}
       <HeaderMain />
       <ScrollView
         showsHorizontalScrollIndicator={false}
@@ -83,31 +83,28 @@ function HomeStackScreen() {
             onPress={() => navigation.navigate('ProductList')}
             title="Tìm Kiếm Hàng Đầu"
           />
-          <RenderSlideProduct data={data1} />
+          <RenderSlideProductSearchTop data={data1} />
         </View>
         <View style={[styles.row]}>
           <HeaderListCard
             onPress={() => navigation.navigate('ProductList')}
             title="Sản Phẩm Mới"
           />
-          <RenderSlideProduct data={data1} />
+          <RenderSlideProductSearchTop data={data1} />
         </View>
         <View style={[styles.containerListColumn]}>
           <HeaderListCard
             onPress={() => navigation.navigate('ProductList')}
             title="Bán Chạy"
           />
-          {arr &&
-            arr?.map((item, index) => {
-              return <ItemRow key={index} />;
-            })}
+          <RenderListProductSellingHome data={arr} />
         </View>
         <View style={[styles.row]}>
           <HeaderListCard
             onPress={() => navigation.navigate('ScreenPostSale')}
             title="Khuyến Mãi"
           />
-          <ListPost data={data2} />
+          <ListPostHome data={data2} />
         </View>
       </ScrollView>
     </View>

@@ -18,7 +18,7 @@ export default function RenderListNotification(props) {
     // const rowHeightAnimatedValue = new Animated.Value(60);
     const handleDelete = () => {
       //   data.handleDelete(data.data.item);
-      console.log(data.rouMap);
+      // console.log(data.rouMap);
     };
     return (
       //   <HiddenItemWithActions
@@ -38,14 +38,19 @@ export default function RenderListNotification(props) {
   };
   const handleDeletes = index => {};
   return (
-    <ScrollView
-      showsHorizontalScrollIndicator={false}
-      showsVerticalScrollIndicator={false}
+    <View
+      // showsHorizontalScrollIndicator={false}
+      // showsVerticalScrollIndicator={false}
       style={[styles.container]}>
       <SwipeListView
+        style={{height: '96%'}}
         data={props.data}
         renderItem={(data, rowMap) => (
-          <NotificationItem rouMap={rowMap} data={data} />
+          <NotificationItem
+            handleOpen={props.handleOpen}
+            rouMap={rowMap}
+            data={data}
+          />
         )}
         // leftOpenValue={75}
         disableRightSwipe
@@ -64,12 +69,13 @@ export default function RenderListNotification(props) {
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
       />
-    </ScrollView>
+    </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
+    marginTop: 4,
   },
   rowBack: {
     justifyContent: 'flex-end',

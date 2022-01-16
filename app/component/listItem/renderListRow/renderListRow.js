@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 // import {ScrollView} from 'react-native-gesture-handler';
-import Branch from './../RenderListItemRow/branch';
 import Ratting from './../../ratting/ratting';
 import {stylesText} from '../../../constant/styleColor';
 import {styleColorIcon} from './../../../constant/styleColor';
@@ -49,8 +48,7 @@ export default function RenderListRow(props) {
 }
 
 const Item = () => {
-  let mytextvar =
-    'Nem rán/chả giò Nem rán/chả giò Nem rán/chả giò Nem rán/chả giò';
+  let mytextvar = 'Thưởng thức thực đơn trưa giá chỉ 235K chủ thẻ Rewards Plus';
   return (
     <View style={[styles.containerItem]}>
       <TouchableOpacity activeOpacity={0.8}>
@@ -81,11 +79,10 @@ const Item = () => {
 };
 
 const ItemColumn = () => {
-  let mytextvar =
-    'Nem rán/chả giò Nem rán/chả giò Nem rán/chả giò Nem rán/chả giò';
+  let mytextvar = 'Thưởng thức thực đơn trưa giá chỉ 235K chủ thẻ Rewards Plus';
   return (
     <View style={[styles.containerItem_column]}>
-      <TouchableOpacity activeOpacity={0.8}>
+      <TouchableOpacity style={{width: '30%', height: 100}} activeOpacity={0.8}>
         <Image
           style={[styles.images_column]}
           source={require('../../../asset/images/food-banner3.jpg')}
@@ -143,10 +140,9 @@ const styles = StyleSheet.create({
     height: 180,
   },
   cardTitle: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '400',
     color: 'black',
-    // fontFamily:
   },
   detail: {
     marginTop: 5,
@@ -163,15 +159,19 @@ const styles = StyleSheet.create({
   },
   // column
   detail_column: {
-    marginTop: 5,
+    width: '68%',
+    height: '100%',
   },
   images_column: {
     width: '100%',
-    height: 150,
+    height: '100%',
+    borderRadius: 3,
   },
   containerItem_column: {
     marginBottom: 25,
-    flexDirection: 'column',
+    flexDirection: 'row',
     width: '100%',
+    justifyContent: 'space-between',
+    // alignItems: 'center',
   },
 });

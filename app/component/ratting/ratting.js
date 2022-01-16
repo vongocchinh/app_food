@@ -4,18 +4,19 @@ import {styleColorIcon} from './../../constant/styleColor';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 function Ratting(props) {
+  const {sizeIcon = 16} = props;
   return (
     <View style={[styles.container, props.style]}>
       <Icon
         style={{marginTop: -1}}
         name="star"
         color={styleColorIcon.buttonLogin}
-        size={16}
+        size={sizeIcon}
       />
-      <Text numberOfLines={1} style={[styles.numberRatting]}>
+      <Text numberOfLines={1} style={[styles.numberRatting, props.style]}>
         51
       </Text>
-      <Text style={[styles.textRatting]}>(126 đánh giá)</Text>
+      <Text style={[styles.textRatting, props.style]}>(126 đánh giá)</Text>
     </View>
   );
 }

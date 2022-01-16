@@ -1,9 +1,9 @@
 import React from 'react';
 import {View, TouchableOpacity, Image, Text, StyleSheet} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import TextNumberLine from './../text/textNumberLine';
-import {styleColorIcon} from './../../constant/styleColor';
-import Ratting from './../ratting/ratting';
+import TextNumberLine from '../text/textNumberLine';
+import {styleColorIcon} from '../../constant/styleColor';
+import Ratting from '../ratting/ratting';
 
 export default function Card(props) {
   const {value} = props;
@@ -46,13 +46,13 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   name: {
-    fontSize: 15,
+    fontSize: 14,
     color: 'black',
     fontWeight: '400',
     textAlign: 'left',
   },
   branch: {
-    fontSize: 13,
+    fontSize: 12,
     color: 'black',
     fontWeight: '300',
   },

@@ -27,6 +27,7 @@ import FilterScreen from './app/screen/filterScreen/filterScreen';
 import ScreenPostSale from './app/screen/screenPostSale/ScreenPostSale';
 import ScreenPostDetail from './app/screen/screenPostSale/ScreenPostDetail';
 import NotificationScreen from './app/screen/notificationScreen/NotificationScreen';
+import NotificationDetailScreen from './app/screen/notificationScreen/NotificationDetailScreen';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -35,7 +36,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{headerShown: false}}
-          initialRouteName="MainDrawer">
+          initialRouteName="Login">
           <Stack.Screen name="MainDrawer" component={MainDrawer} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="SignUp" component={SignUp} />
@@ -51,6 +52,10 @@ const App = () => {
           <Stack.Screen name="FilterScreen" component={FilterScreen} />
           <Stack.Screen name="ScreenPostSale" component={ScreenPostSale} />
           <Stack.Screen name="ScreenPostDetail" component={ScreenPostDetail} />
+          <Stack.Screen
+            name="NotificationDetailScreen"
+            component={NotificationDetailScreen}
+          />
           <Stack.Screen
             name="NotificationScreen"
             component={NotificationScreen}

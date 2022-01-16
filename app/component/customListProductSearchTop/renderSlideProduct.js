@@ -3,7 +3,7 @@ import {View, Image, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Card from './card';
 import SlideProduct from './slideProduct';
 
-export default function RenderSlideProduct(props) {
+export default function RenderSlideProductSearchTop(props) {
   const {data} = props;
   return (
     <>
